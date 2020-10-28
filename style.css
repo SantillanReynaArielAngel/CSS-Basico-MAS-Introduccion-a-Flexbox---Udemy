@@ -1,0 +1,146 @@
+/*Notas Globales:
+
+PADDING:
+El área de padding es el espacio entre el contenido del elemento y su borde (border). No se permiten valores negativos.
+
+    Ejemplos:
+    aplica 5% de padding en todos los lados
+    padding: 5%;                
+
+    aplica 10px de padding en todos los lados
+    padding: 10px;               
+
+    arriba y abajo, 10px de padding | izquierda y derecha, 20px de padding
+    padding: 10px 20px;           
+
+    arriba, 10px de padding  |  izquierda y derecha, 3% de padding |  bottom, 20px padding   
+    padding: 10px 3% 20px;        
+
+    derecha  3px  padding  |   abajo 30px padding  |  izquierda   5px  padding  | en dirección de las agujas del reloj
+    padding: 1em 3px 30px 5px;    arriba    1em  padding  
+
+
+MARGIN:
+La propiedad CSS margin establece el margen para los cuatro lados
+
+    Ejemplos:
+    Aplica a todos los cuatro lados
+    margin: 1em;
+
+    Vertical | Horizontal
+    margin: 5% auto;
+
+    Arriba | Horizontal | Abajo
+    margin: 1em auto 2em; 
+
+    Arriba | Derecha | Abajo | Izquierda
+    margin: 2px 1em 0 auto;
+
+*/
+
+body{
+    background-color: #dcdcdc;
+    margin:0;
+   }
+
+.Separador{
+    clear: both;
+    margin-top: 800;
+}
+
+.Contenedor{
+    width: 80%;
+    margin: auto;
+}
+
+
+/*APLICAR CAMBIOS A TODO LO QUE CONTENGA EL CONTENEDOR*/
+.Caja{
+    /*
+    border-bottom: 8px blue solid;
+    border-left: 8px blue solid;
+    border-right: 8px blue solid;
+    border-top: 8px blue solid;
+    */
+
+    /*simplificando lo anterior:*/
+    border: 8px blue solid;
+
+    /*20px para los 4 lados*/
+    padding: 20px;
+
+
+   /*20px para arriba y abajo | 0 izquierda y derecha*/
+   /* padding: 20px 0;  */
+
+
+   /* Margen Personalizado
+   Los valores se aplicaran segun las manecillas del reloj.
+   margin: Xpx(arriba) Xpx(derecha) Xpx(abajo) Xpx(Izquierda)
+   */
+   margin: 19px 10px 60px 5px;
+
+}
+
+/*APLICAR CAMBIOS A ELEMENTOS DE UNA CAJA*/
+.Caja h1{
+    text-decoration: underline;
+}
+
+
+.Caja2{
+    /*orden: Xpx(Tamaño) #XXX(Color) X(Estilo)*/
+    border: 10px #333 dotted;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.Caja3{
+    border: 2px black solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+
+.Contenedor2{
+    float: left;
+    width: 33%;
+    margin-right: 2px;
+}
+
+.Galeria img{
+    width: 100%;
+    height: auto;
+}
+
+.Galeria img:hover{
+    opacity: 0.7;
+}
+
+.Posisionamiento{
+    clear: both;
+    border: 1px solid blue;
+    height: 300px;
+    /* position: fixed; Se fija  en la pantallla*/
+    position: relative;
+    background-image: url("http://lorempixel.com/200/200/food/3/TextoPrueba");
+    background-size: cover; /*100px | cover(nos colaca nuestra img de fondo mostrandonos la parte de correspondoiente a background-position;)*/
+    background-repeat: no-repeat; /*repeat | no-repeat | repeat-y | repeat-x*/
+    background-position: 50% 60%; /* center top | bottom right* | 50% (centro de todo) | 50%(redercha A izquierda) 30%(arriba A abajo)*/
+
+}
+
+.Posisionamiento h2{
+    /* position: relative; hara que le h2 este abajo */
+    position: absolute; /* hara que le h2 este abajo*/
+    top:100px;
+}
+
+.Posisionamiento h3{
+    /* position: relative; hara que le h2 este abajo */
+    position: absolute; /* hara que le h2 este abajo*/
+    right: 10px;
+    bottom: 10px;
+    
+}
